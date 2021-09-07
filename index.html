@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicios JavScript</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+             * {
+           padding: 0;
+           margin: 0;
+       }
+        </style>
+     <h1 style="color:darkred;font-size: 25px;font-family: Verdana;background-color: lightslategray; text-align: center;">
+         EJERCICIOS JavaScript
+     </h1>  
+
+    <section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+     <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 1 - Salario trabajador</h2>
+     <center><form id="SalaryCalculate_form" name="" method="POST">
+        <filedset>
+            <legend>Datos cálculo salario</legend>
+            <label for="horas" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Horas Trabajadas</label>
+          <input type="number" id="horas" autofocus placeholder="Ingresa las horas trabajadas" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+   <hr style="border: 5px dashed solid black;">
+    <label for="valor" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Pago por hora ($): </label>
+         <input type="number" id="valor" autofocus placeholder="Paga por hora" style="background-color: transparent; color: black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+         <br>
+ <center><button type="button" onclick="salario()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Calcular salario</button>	
+   <br>
+   <p id="salaryValue" style="color:red;font-size: 18px;"></p>
+           </filedset>
+       </form>	
+       <br>
+       <br>
+    </section>
+    <section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+        <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 2 - Índice masa corporal</h2>
+        <center><form id="SalaryCalculate_form" name="" method="POST">
+           <filedset>
+               <legend>Datos cálculo índice masa corporal</legend>
+               <label for="kg" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Peso en kg </label>
+             <input type="number" id="kg" autofocus placeholder="Ingresa tu peso" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+      <hr style="border: 5px dashed solid black;">
+       <label for="estatura" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Estatura (m): </label>
+            <input type="number" id="estatura" autofocus placeholder="Ingresa tu Estatura " style="background-color: transparent; color: black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+            <br>
+    <center><button type="button" onclick="Indice()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Calcular</button>	
+      <br>
+      <p id="indiceVal" style="color:red;font-size: 18px;"></p>
+              </filedset>
+          </form>
+          <br>
+          <br>	
+       </section>
+       <section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+        <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 3 - Tienda barras de dulce.</h2>
+        <center><form id="SalaryCalculate_form" name="" method="POST">
+           <filedset>
+               <legend>Datos cálculo tienda barras de dulce </legend>
+               <label for="dulces" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Cantidad de barras de dulce: </label>
+             <input type="number" id="dulces" autofocus placeholder="Ingresa valor" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+      <hr style="border: 5px dashed solid black;">
+            <br>
+    <center><button type="button" onclick="dulcesTotal()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Calcular</button>	
+      <br>
+      <p id="dulcesVal" style="color:red;font-size: 18px;"></p>
+              </filedset>
+          </form>
+          <br>
+          <br>	
+       </section>
+
+       <section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+        <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 4 - Suma lista números.</h2>
+        <center><form id="SalaryCalculate_form" name="" method="POST">
+           <filedset>
+               <legend>Tamaño lista </legend>
+               <label for="tamano" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Cantidad números a evaluar: </label>
+             <input type="number" id="tamano" autofocus placeholder="Ingresa valor" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+      <hr style="border: 5px dashed solid black;">
+            <br>
+    <center><button type="button" onclick="sumaLista()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Calcular</button>	
+      <br>
+      <p id="listaSum" style="color:red;font-size: 18px;"></p>
+              </filedset>
+          </form>
+          <br>
+          <br>	
+       </section>
+       <section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+        <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 5 - palabras palíndromas.</h2>
+        <center><form id="SalaryCalculate_form" name="" method="POST">
+           <filedset>
+               <legend>Palindromo</legend>
+               <label for="palabra" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">Palabra a evaluar: </label>
+             <input type="text" id="palabra" autofocus placeholder="Ingresa palabra" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+      <hr style="border: 5px dashed solid black;">
+            <br>
+    <center><button type="button" onclick="palindromo()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Validar</button>	
+      <br>
+      <p id="palabrVal" style="color:red;font-size: 18px;"></p>
+              </filedset>
+          </form>
+          <br>
+          <br>	
+       </section>
+    <!--Revisa este-->
+<section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+     <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 6 - Arreglos / media y desviación estándar.</h2>
+     <center><form id="SalaryCalculate_form" name="" method="POST">
+        <filedset>
+            <legend>Arreglos</legend>
+            <label for="arreglo" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">arreglo a evaluar: </label>
+          <input type="text" id="arreglo" autofocus placeholder="Ingresa valores" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+   <hr style="border: 5px dashed solid black;">
+         <br>
+ <center><button type="button" onclick="arregloClc()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Validar</button>	
+   <br>
+   <p id="arregloVal" style="color:red;font-size: 18px;"></p>
+           </filedset>
+       </form>
+       <br>
+       <br>	
+    </section>
+    <section style="width:100%;height: auto; background-color:lightgray; border-radius:20px;">
+        <h2 style="color:darkred;font-size: 25px;font-family: Verdana;background-color:cornflowerblue; text-align: center;">Punto 7 - Objetos / frutas.</h2>
+        <center><form id="SalaryCalculate_form" name="" method="POST">
+           <filedset>
+               <legend>Arreglos</legend>
+               <label for="fruta" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">fruta a buscar: </label>
+             <input type="text" id="fruta" autofocus placeholder="Ingresa nombre" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+      <hr style="border: 5px dashed solid black;">
+            <br>
+            <label for="kilos" style="background-color: transparent; color:black; width: 650px; padding: 10px; text-align: center; border-radius: 4px;">kg: </label>
+            <input type="text" id="kilos" autofocus placeholder="Ingresa nombre" style="background-color: transparent; color:black;  width: 650px; padding: 10px; text-align: center; border-radius: 4px;"><br>
+     <hr style="border: 5px dashed solid black;">
+           <br>
+    <center><button type="button" onclick="Frutaclc()" style="background-color: transparent; color:blue;border-radius:20px; font-size: 20px;">Validar</button>	
+      <br>
+      <p id="frutas" style="color:red;font-size: 18px;"></p>
+              </filedset>
+          </form>
+          <br>
+          <br>	
+       </section>
+    </body>
+    <script src="JavaScript/Punto1.js"></script>
+    <script src="JavaScript/Punto2.js"></script>
+    <script src="JavaScript/Punto3.js"></script>
+    <script src="JavaScript/Punto4.js"></script>
+    <script src="JavaScript/Punto5.js"></script>
+    <script src="JavaScript/Punto6.js"></script>
+    <script src="JavaScript/Punto7.js"></script>
+
+
+</html>
